@@ -1,17 +1,29 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
-
+command_timeout = 5000
 # Inserts a blank line between shell prompts
 add_newline = true
 
 # Replace the '❯' symbol in the prompt with '➜'
 #'[ TheMoonK1d' 
 [character] # The name of the module we are configuring is 'character'a
-success_symbol = '[Th3M00nK1d ➜](bold red)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+success_symbol = '[➜](bold #737a8c)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+[battery]
+full_symbol = "battery"
+charging_symbol = "electric_plug"
+discharging_symbol = "zap"
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+#[character]
+#error_symbol = "[heavy_multiplication_x](bold red)"
 
 [git_branch]
 format = " [$symbol$branch]($style) "
@@ -48,3 +60,34 @@ disabled = false
 
 [nodejs]
 format = "via [🤖 $version](bold green) "
+
+[hostname]
+ssh_only = false
+format = "<$hostname>"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+[julia]
+format = "$symbol$version "
+symbol = "ஃ "
+style = "bold green"
+
+[python]
+format = "$symbol$version "
+style = "bold green"
+
+[rust]
+format = "$symbol$version "
+style = "bold green"
+
+[time]
+#time_format = "%a, %b %d, %Y | %I:%M%P ️"
+time_format = "%a, %b %d"
+format = "$time($style) "
+style = "bold white"
+disabled = false
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false

@@ -8,9 +8,9 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
-#  - /path/to/alacritty.yml
-
+import:
+  #    - /path/to/alacritty.yml
+ - ~/.config/alacritty/themes/themes/tmkNew.yaml
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -200,7 +200,7 @@ window:
 colors:
   # Default colors
   primary:
-    background: '#2E3440'
+  # background: '#1e1f31'
   #  foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
