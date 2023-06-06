@@ -1,0 +1,1 @@
+convert <file> -colorspace gray -depth 2 -type truecolor <new_file>.bmp
